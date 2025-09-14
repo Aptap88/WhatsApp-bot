@@ -205,10 +205,11 @@ process.on('unhandledRejection', (reason, promise) => {
 
 // Start server
 const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => {
+server.listen(PORT, '0.0.0.0', () => {
   console.log(`🚀 WhatsApp Auto Bot Server running on port ${PORT}`);
   console.log(`🌐 Environment: ${process.env.NODE_ENV || 'development'}`);
   console.log(`💾 Database: ${process.env.DB_HOST}:${process.env.DB_PORT}`);
+  console.log(`✅ Server is ready and listening for connections`);
 });
 
 module.exports = { app, io, activeSessions };

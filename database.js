@@ -9,12 +9,9 @@ class Database {
       password: process.env.DB_PASSWORD || 'Aptap786920',
       database: process.env.DB_NAME || 'cztldhwx_Auto_PostTg',
       port: process.env.DB_PORT || 3306,
-      waitForConnections: true,
-      connectionLimit: 10,
-      queueLimit: 0,
-      acquireTimeout: 60000,
-      timeout: 60000,
-      reconnect: true
+      connectTimeout: 60000,
+      supportBigNumbers: true,
+      bigNumberStrings: true
     };
     
     this.initializeDatabase();
